@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+  }
+  .info-container {
+    width: 70%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .copy-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 2px 5px;
+    cursor: pointer;
+  }
+  .generate-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px; /* Larger padding for bigger button */
+    cursor: pointer;
+    margin-top: 10px; /* Space between button and Zip Code */
+  }
+  @media (max-width: 768px) {
+    .info-container {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="info-container">
+  <p><strong>Account Number:</strong> <span id="number">642xxxxx</span> <button class="copy-button" onclick="copyText('number')">Copy Account Number</button></p>
+  <p><strong>Address:</strong> <span id="address">56 Shoreditch High Street</span> <button class="copy-button" onclick="copyText('address')">Copy address</button></p>
+  <p><strong>City:</strong> <span id="city">London</span> <button class="copy-button" onclick="copyText('city')">Copy City</button></p>
+  <p><strong>Zip Code:</strong> <span id="zip">E16JJ</span> <button class="copy-button" onclick="copyText('zip')">Copy Zip Code</button></p>
+</div>
+<button class="generate-button" onclick="generateInfo()">Generate New Bank Account Number</button>
+
+<script>
+function generateInfo() {
+  var randomNumber = Math.floor(Math.random() * 10000000);
+  var numberWithPrefix = "642" + randomNumber.toString().padStart(5, 'x');
+  document.getElementById("number").textContent = numberWithPrefix;
+}
+
+function copyText(id) {
+  var text = document.getElementById(id).textContent;
+  var tempTextArea = document.createElement("textarea");
+  document.body.appendChild(tempTextArea);
+  tempTextArea.value = text;
+  tempTextArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempTextArea);
+  alert("Copied: " + text);
+}
+
+// Generate new info on page load
+generateInfo();
+</script>
+
+</body>
+</html>
