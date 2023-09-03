@@ -6,10 +6,10 @@
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 */
 @font-face {font-family: "GeosansLight";
-    src: url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.eot"); /* IE9*/
-    src: url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.woff2") format("woff2"), /* chrome firefox */
-    url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.woff") format("woff"), /* chrome firefox */
-    url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    src: url("https://ahmedmahmoudac.github.io/onlinebank2/files/css/3116cf7d5d85070c2c0d4b96bfee7d8d.eot"); /* IE9*/
+    src: url("https://ahmedmahmoudac.github.io/onlinebank2/files/css/3116cf7d5d85070c2c0d4b96bfee7d8d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://ahmedmahmoudac.github.io/onlinebank2/files/css/3116cf7d5d85070c2c0d4b96bfee7d8d.woff2") format("woff2"), /* chrome firefox */
+    url("https://ahmedmahmoudac.github.io/onlinebank2/files/css/3116cf7d5d85070c2c0d4b96bfee7d8d.woff") format("woff"), /* chrome firefox */
+    url("https://ahmedmahmoudac.github.io/onlinebank2/files/css/3116cf7d5d85070c2c0d4b96bfee7d8d.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
     url("https://db.onlinewebfonts.com/t/3116cf7d5d85070c2c0d4b96bfee7d8d.svg#GeosansLight") format("svg"); /* iOS 4.1- */
 }
