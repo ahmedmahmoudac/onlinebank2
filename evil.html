@@ -51,6 +51,7 @@
 
 <div class="info-container">
   <p><strong>Account Number:</strong> <span id="number">642xxxxx</span> <button class="copy-button" onclick="copyText('number')">Copy Account Number</button></p>
+  <p><strong>Sort Code:</strong> <span id="sortCode">231470</span> <button class="copy-button" onclick="copyText('sortCode')">Copy Sort Code</button></p>
   <p><strong>Address:</strong> <span id="address">56 Shoreditch High Street</span> <button class="copy-button" onclick="copyText('address')">Copy address</button></p>
   <p><strong>City:</strong> <span id="city">London</span> <button class="copy-button" onclick="copyText('city')">Copy City</button></p>
   <p><strong>Zip Code:</strong> <span id="zip">E16JJ</span> <button class="copy-button" onclick="copyText('zip')">Copy Zip Code</button></p>
@@ -59,9 +60,12 @@
 
 <script>
 function generateInfo() {
-  var randomNumber = Math.floor(Math.random() * 10000000);
-  var numberWithPrefix = "642" + randomNumber.toString().padStart(5, 'x');
+  var randomNumber = Math.floor(Math.random() * 100000); // Limit to 5 digits
+  var numberWithPrefix = "642" + randomNumber.toString().padStart(5, '0'); // Pad to 5 digits with leading zeros
   document.getElementById("number").textContent = numberWithPrefix;
+
+  var sortCode = "231470"; // Sort code remains constant
+  document.getElementById("sortCode").textContent = sortCode;
 }
 
 function copyText(id) {
